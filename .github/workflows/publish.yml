@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@1
+        uses: docker/setup-buildx-action@v1
 
       - name: Login to Docker hub
         run: echo "${{ secrets.DOCKER_PASSWORD}}" | docker login -u "${{ env.DOCKER_USERNAME }}" --password-stdin
